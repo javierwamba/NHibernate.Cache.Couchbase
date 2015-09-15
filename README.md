@@ -12,7 +12,6 @@
 
   <couchbase>
     <servers>
-      <!-- changes in appSettings section should also be reflected here -->
       <add uri="http://localhost:8091"></add>
     </servers>
     <buckets>
@@ -47,6 +46,6 @@
 ```c
  protected void Application_Start()
         {
-            ConnectionProvider.Start();
+            Cache.Couchbase.Supports.ConnectionProvider.Start();
         }
   ```      
