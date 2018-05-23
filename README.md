@@ -1,4 +1,4 @@
-# NHibernate.Cache.Couchbase
+# NHibernate.Caches.Couchbase
 ##Config app.config or web.config
 ```xml
 <configSections>
