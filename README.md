@@ -7,7 +7,7 @@
   </configSections>
 
   <appSettings>
-    <add key="nhibernate:cache:bucket:name" value="test" />
+    <add key="nhibernateBucketName" value="test"/>
   </appSettings>
 
   <couchbase>
@@ -32,7 +32,7 @@
     <property name="command_timeout">0</property>
     <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
     <property name="default_schema">yourDatabaseSchema.dbo</property>
-    <property name="cache.provider_class">NHibernate.Cache.Couchbase.CacheProvider,NHibernate.Cache.Couchbase</property>
+    <property name="cache.provider_class">NHibernate.Caches.Couchbase.CacheProvider,NHibernate.Caches.Couchbase</property>
     <property name="cache.use_second_level_cache">true</property>
     <property name="cache.use_query_cache">true</property>
     <property name="cache.region_prefix" >regionSql</property>
@@ -41,14 +41,7 @@
   </session-factory>
 </hibernate-configuration>
 ```
-
-##Code in Global.asax
-```c
-protected void Application_Start()
-{
-    Cache.Couchbase.Supports.ConnectionProvider.Start();
-}
-  ```      
+    
 
 ***Comming soon Source code  
   
